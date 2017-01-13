@@ -25,6 +25,7 @@ upstream django {
 
 server {
     listen      80;
+    server_name nimbostratus-target;
 
     # Send all requests to the Django server.
     location / {
@@ -175,6 +176,7 @@ def configure_nginx():
     config.write(NGINX_CONFIG)
     config.close()
     
+    run_cmd('sudo rm /etc/nginx/sites-enabled/default')
     run_cmd('sudo /etc/init.d/nginx restart')
 
 def configure_uwsgi():
