@@ -2,7 +2,7 @@
 AMI = 'ami-a02f66f2'
 SIZE = 't1.micro'
 
-REGION = 'ap-southeast-1'
+REGION = 'us-west-2'
 
 # You will have to fork my repository, configure SSH keys for deploy and
 # then set the paths here. More information can be found here:
